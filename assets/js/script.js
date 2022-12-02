@@ -60,7 +60,7 @@ const listPastSearch = function(savedSearch){
 const getGeos = function(searchPlace){
     loadSearches();
 
-    let apiUrlGeo = `http://api.openweathermap.org/geo/1.0/direct?q=${searchPlace}&limit=1&appid=${apiKey}`
+    let apiUrlGeo = `https://api.openweathermap.org/geo/1.0/direct?q=${searchPlace}&limit=1&appid=${apiKey}`
 
     fetch(apiUrlGeo).then(function(response){
         response.json().then(function(data){
@@ -73,7 +73,7 @@ const getGeos = function(searchPlace){
 };   
 
 let getWeather = function(lat, lon){
-    let apiUrlWeather = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`
+    let apiUrlWeather = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`
 
     fetch(apiUrlWeather).then(function(response){
         response.json().then(function(data){
