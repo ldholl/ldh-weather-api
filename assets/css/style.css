@@ -1,7 +1,9 @@
 .hero {
     border-bottom: hsl(171, 100%, 41%) 5px solid;
 }
-
+ h1 {
+    font-size: 25px;
+ }
 #left-panel {
     float: left;
     width: 350px;

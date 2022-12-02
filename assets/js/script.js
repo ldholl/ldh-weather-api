@@ -4,7 +4,6 @@ let lon
 let searches = [];
 const submitBtn = document.getElementById('submit-btn');
 let searchInput = document.getElementById('search-input');
-const pastBtns = document.getElementsByClassName('past-search')
 
 
 submitBtn.onclick = function(event){
@@ -20,10 +19,6 @@ submitBtn.onclick = function(event){
 
 };
 
-pastBtns.onclick = function(){
-
-    console.log('click');
-}
 
 
 
@@ -53,11 +48,11 @@ const loadSearches = function(){
 const listPastSearch = function(savedSearch){
     let pastList = document.getElementById('past-list');
     let pastPoint = document.createElement('li')
-    pastPoint.className = 'past-search'
     pastList.appendChild(pastPoint);
     
     let pastButton = document.createElement('button');
     pastButton.className = 'button past-search is-primary is-light'
+    pastButton.id = savedSearch
     pastButton.innerText = savedSearch;
     pastPoint.appendChild(pastButton);
 }
@@ -94,7 +89,7 @@ let getWeather = function(lat, lon){
             let todayy = document.createElement('h1');
             todayy.innerText = 'Today';
             todayLine.appendChild(todayy);
-            
+
             let todayDate = document.createElement('h2');
             todayDate.innerText = thisDate.dt_txt;
             todayLine.appendChild(todayDate);
@@ -164,3 +159,11 @@ let getWeather = function(lat, lon){
 }
 
 loadSearches();
+
+document.querySelectorAll('.past-search').forEach(item => {
+    item.addEventListener('click', event => {
+        event.preventDefault();
+        let pastCity = event.target.id;
+        getGeos(pastCity);
+    })
+})
