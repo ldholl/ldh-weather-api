@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+ <!-- Header    -->
+  <section class="hero is-small is-primary">
+    <div class="hero-body">
+        <h1 class="title">Weather Dashboard</h1>
+    </div>
+  </section>
+
+
+    <main>
+        <div id="left-panel">
+            <div class="searches">
+                <input class="input is-primary left-panel" id="search-input" type="text">
+                <button class="button is-primary left-panel" id="submit-btn" type="submit" value="Submit">Search</button>
+                <!-- <input class="button is-primary left-panel" id="submit-btn" type="submit" value="Submit"> -->
+                <div class="recent-searches">
+                    <h2 class="left-panel">Recent Searches:</h2>
+                    <ul id="past-list">
+
+                    </ul>
+                </div>
+            </div>  
+        </div>
+        
+        <div id="current-search">
+        </div>
+
+        
+        <div class="upcoming-panels">
+            <h2>Upcoming Weather:</h2>
+            <div class="columns is-8" id="day-list">
+                </div>
+            </div>
+        </div>
+
+    </main>
+<script src="./assets/js/script.js"></script>
+<script src="https://kit.fontawesome.com/5db11db1bb.js" crossorigin="anonymous"></script>    
+</body>
+</html>

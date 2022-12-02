@@ -1,0 +1,41 @@
+.hero {
+    border-bottom: hsl(171, 100%, 41%) 5px solid;
+}
+
+#left-panel {
+    float: left;
+    width: 350px;
+    height: 100%;
+    margin-right: 20px;
+    border-right: solid 5px hsl(171, 100%, 41%);
+    border-bottom: solid 5px hsl(171, 100%, 41%);
+    border-left: solid 5px hsl(171, 100%, 41%);
+}
+
+.left-panel {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#search-input {
+    width: 75%;
+}
+#current-search {
+    padding-left: 20px;
+}
+
+.past-search{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.recent-panels {
+    background-color: aqua;
+}
+
+.column{
+    border: solid 5px hsl(171, 100%, 41%);
+    margin-top: 30px;
+    margin-left: 10px;
+    height: 100%;
+}
